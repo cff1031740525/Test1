@@ -3,11 +3,291 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
     tools:context="test.bwei.com.test1.Main2Activity">
-<test.bwei.com.test1.MyLinerLayout
-    android:id="@+id/buju"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"></test.bwei.com.test1.MyLinerLayout>
+
+    <TextView
+        android:id="@+id/tv_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="登录你的头条，精彩永不丢失"
+        android:textColor="#111"
+        android:textSize="20dp"
+        android:textStyle="italic" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dlshape"
+        android:padding="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/w"
+            android:gravity="center_vertical"
+            android:padding="7dp">
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="#fff"
+                android:hint="请输入手机号"
+                android:textColorHint="#ccc" />
+
+            <LinearLayout
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#ccc"></LinearLayout>
+
+            <TextView
+                android:id="@+id/phone_msg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#fff"
+                android:gravity="center"
+                android:text="发送验证码" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/dlshape"
+        android:padding="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/w"
+            android:padding="7dp">
+
+            <EditText
+                android:id="@+id/et_yanzheng"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="#fff"
+                android:hint="请输入验证码"
+                android:textColorHint="#ccc" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <Button
+            android:id="@+id/btn_more_reg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn"
+            android:text="进入头条"
+            android:textColor="#fff"
+            android:textSize="17dp"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_more_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="xinxin"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/cb_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="我已阅读并同意“用户协议和隐私条款”"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/more_reg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="账号密码登录"
+            android:textColor="#0066cc" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:padding="10dp">
+
+            <LinearLayout
+
+                android:layout_width="50dp"
+                android:layout_height="1dp"
+
+                android:background="#ccc"></LinearLayout>
+
+            <TextView
+                android:id="@+id/more"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:gravity="center_vertical"
+                android:text="更多登录方法" />
+
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="1dp"
+                android:background="#ccc"></LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/yuan"
+                    android:gravity="center"
+                    android:padding="1dp"
+
+                    >
+
+                    <ImageView
+                        android:id="@+id/more_weixin"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@mipmap/wx" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/yuan"
+                    android:gravity="center"
+                    android:padding="1dp"
+
+                    >
+
+                    <ImageView
+                        android:id="@+id/more_qq"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+
+                        android:src="@mipmap/qq" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:padding="1dp"
+
+                    >
+
+                    <ImageView
+                        android:id="@+id/more_weibo"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+
+                        android:src="@mipmap/wb" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/yuan"
+                    android:gravity="center"
+                    android:padding="1dp">
+
+                    <ImageView
+                        android:id="@+id/more_tianyi"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+
+                        android:src="@mipmap/ty" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+
+                    >
+
+                    <ImageView
+                        android:id="@+id/more_email"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+
+                        android:src="@mipmap/yx" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
 </LinearLayout>
