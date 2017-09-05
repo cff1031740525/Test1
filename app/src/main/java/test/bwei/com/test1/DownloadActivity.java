@@ -57,6 +57,7 @@ private List<CateBean> list=new ArrayList<>();
                     cb.setChecked(true);
                     cateBean.status=true;
                 }
+                //修改数据  并更新
                 list.set(pos,cateBean);
             }
         });

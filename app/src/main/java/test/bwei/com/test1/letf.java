@@ -134,7 +134,7 @@ public class letf extends Fragment implements View.OnClickListener {
                     edit.putString("status","yj").commit();
                 }else if(sp.getString("status",null).equals("yj")){
                     ((AppCompatActivity)getActivity()).getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-                    sp.edit().clear();
+                    sp.edit().clear().commit();
                 }
 
 
