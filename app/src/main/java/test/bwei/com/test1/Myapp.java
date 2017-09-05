@@ -11,6 +11,7 @@ import com.umeng.socialize.UMShareAPI;
 
 import org.xutils.x;
 
+import cn.jpush.android.api.JPushInterface;
 import test.bwei.com.test1.R;
 
 /**
@@ -37,5 +38,7 @@ public class Myapp extends Application{
         ImageLoader.getInstance().init(configuration);
         MobSDK.init(this, Constants.AppKey, Constants.AppSecret);
         UMShareAPI.get(this);
+        JPushInterface.setDebugMode(true);
+        JPushInterface.init(this);
     }
 }
