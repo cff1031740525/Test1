@@ -27,7 +27,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         //初始化每一个条目
-        View v= LayoutInflater.from(context).inflate(R.layout.reitem,null);
+        View v= LayoutInflater.from(context).inflate(R.layout.reitem,parent,false);
         ViewHolder holder=new ViewHolder(v);
         v.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,8 +49,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return list.size();
     }
     class ViewHolder extends RecyclerView.ViewHolder{
-        TextView tv_name;
-        CheckBox cb;
+        private TextView tv_name;
+        private CheckBox cb;
         public ViewHolder(View itemView) {
             super(itemView);
             tv_name=itemView.findViewById(R.id.name);
