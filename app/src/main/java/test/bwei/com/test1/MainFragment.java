@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 
@@ -38,32 +39,77 @@ public class MainFragment extends Fragment{
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         lv = v.findViewById(R.id.xlv);
-        Bundle bundle=getArguments();
-        String type = bundle.getString("type");
-        final RequestParams parmas=new RequestParams(HttpApi.URL);
-        parmas.addBodyParameter("key",HttpApi.KEY);
-        parmas.addBodyParameter("type",type);
-        x.http().post(parmas, new Callback.CommonCallback<String>() {
+        //调用联网判断方法  使用的接口回调的方法
+        new NetWorkUtils().verity(getActivity(), new NetWorkUtils.NetWorks() {
+            //有手机网时
             @Override
-            public void onSuccess(String result) {
-                parseJson(result);
+            public void hasMob() {
+
+                Bundle bundle=getArguments();
+                String type = bundle.getString("type");
+                final RequestParams parmas=new RequestParams(HttpApi.URL);
+                parmas.addBodyParameter("key",HttpApi.KEY);
+                parmas.addBodyParameter("type",type);
+                x.http().post(parmas, new Callback.CommonCallback<String>() {
+                    @Override
+                    public void onSuccess(String result) {
+                        parseJson(result);
+                    }
+
+                    @Override
+                    public void onError(Throwable ex, boolean isOnCallback) {
+
+                    }
+
+                    @Override
+                    public void onCancelled(CancelledException cex) {
+
+                    }
+
+                    @Override
+                    public void onFinished() {
+
+                    }
+                });
             }
 
             @Override
-            public void onError(Throwable ex, boolean isOnCallback) {
+            public void haswifi() {
 
+                Bundle bundle=getArguments();
+                String type = bundle.getString("type");
+                final RequestParams parmas=new RequestParams(HttpApi.URL);
+                parmas.addBodyParameter("key",HttpApi.KEY);
+                parmas.addBodyParameter("type",type);
+                x.http().post(parmas, new Callback.CommonCallback<String>() {
+                    @Override
+                    public void onSuccess(String result) {
+                        parseJson(result);
+                    }
+
+                    @Override
+                    public void onError(Throwable ex, boolean isOnCallback) {
+
+                    }
+
+                    @Override
+                    public void onCancelled(CancelledException cex) {
+
+                    }
+
+                    @Override
+                    public void onFinished() {
+
+                    }
+                });
             }
 
             @Override
-            public void onCancelled(CancelledException cex) {
-
-            }
-
-            @Override
-            public void onFinished() {
+            public void nonet() {
 
             }
         });
+
     }
     private void parseJson(String result) {
         Gson gson=new Gson();

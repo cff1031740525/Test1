@@ -69,12 +69,14 @@ private List<CateBean> list=new ArrayList<>();
         x.http().get(parms, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
+                System.out.println("2222222222222"+result);
                 dateB d=new dateB(DownloadActivity.this);
                 SQLiteDatabase helper = d.getWritableDatabase();
                 ContentValues values=new ContentValues();
                 values.put("type",type);
                 values.put("result",result);
                 helper.insert("info",null,values);
+
                 helper.close();
             }
 

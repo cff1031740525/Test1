@@ -10,6 +10,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.kson.slidingmenu.SlidingMenu;
@@ -69,7 +70,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             fragments.add(fragment);
         }
         myview.draw(header,fragments);
+        new NetWorkUtils().verity(this, new NetWorkUtils.NetWorks() {
+            @Override
+            public void hasMob() {
+                Toast.makeText(MainActivity.this,"此时为手机网络",Toast.LENGTH_SHORT).show();
+            }
 
+            @Override
+            public void haswifi() {
+                Toast.makeText(MainActivity.this,"此时为WIFI网络",Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void nonet() {
+
+            }
+        });
     }
 
     private void initMeun() {
