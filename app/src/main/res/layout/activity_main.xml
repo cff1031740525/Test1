@@ -8,6 +8,7 @@
 
     <test.bwei.com.test1.MyLinerLayout
         android:id="@+id/mview"
+        android:background="@color/background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></test.bwei.com.test1.MyLinerLayout>
 

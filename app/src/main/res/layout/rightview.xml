@@ -2,10 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:orientation="vertical"
+    android:background="@color/background"
     android:layout_height="match_parent">
 <RelativeLayout
     android:layout_width="match_parent"
     android:gravity="center_vertical"
+    android:background="@color/background"
     android:layout_height="40dp">
     <ImageView
         android:src="@mipmap/back"
@@ -14,6 +16,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:textSize="20dp"
+        android:textColor="@color/fontcolor"
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:gravity="center_vertical"
@@ -24,10 +27,12 @@
         android:layout_width="match_parent"
         android:layout_height="15dp"></LinearLayout>
     <RelativeLayout
+        android:background="@color/background"
         android:layout_width="match_parent"
         android:gravity="center_vertical"
         android:layout_height="40dp">
         <TextView
+            android:textColor="@color/fontcolor"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
@@ -35,6 +40,7 @@
             android:layout_marginLeft="10dp"
             android:text="清除缓存"/>
         <TextView
+            android:textColor="@color/fontcolor"
             android:layout_width="wrap_content"
             android:textSize="20dp"
             android:layout_height="match_parent"
@@ -50,10 +56,12 @@
         android:layout_marginLeft="10dp"
         android:layout_height="1dp"></LinearLayout>
     <RelativeLayout
+        android:background="@color/background"
         android:layout_width="match_parent"
         android:gravity="center_vertical"
         android:layout_height="40dp">
         <TextView
+            android:textColor="@color/fontcolor"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
@@ -63,12 +71,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:textSize="20dp"
+            android:textColor="@color/fontcolor"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:layout_centerHorizontal="true"
             android:layout_alignParentRight="true"
             android:layout_marginRight="10dp"
-            android:text="7.6M"/>
+            android:text="中"/>
     </RelativeLayout>
     <LinearLayout
         android:background="#CCCC"
@@ -76,6 +85,7 @@
         android:layout_marginLeft="10dp"
         android:layout_height="1dp"></LinearLayout>
     <RelativeLayout
+        android:background="@color/background"
         android:layout_width="match_parent"
         android:gravity="center_vertical"
         android:layout_height="40dp">
@@ -83,18 +93,15 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
+            android:textColor="@color/fontcolor"
             android:textSize="20dp"
             android:layout_marginLeft="10dp"
             android:text="列表显示摘要"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:textSize="20dp"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:layout_centerHorizontal="true"
+        <Switch
             android:layout_alignParentRight="true"
-            android:layout_marginRight="10dp"
-            android:text="7.6M"/>
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content" />
     </RelativeLayout>
     <LinearLayout
         android:background="#CCCC"
@@ -102,6 +109,7 @@
         android:layout_marginLeft="10dp"
         android:layout_height="1dp"></LinearLayout>
     <RelativeLayout
+        android:background="@color/background"
         android:layout_width="match_parent"
         android:gravity="center_vertical"
         android:layout_height="40dp">
@@ -110,6 +118,7 @@
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:textSize="20dp"
+            android:textColor="@color/fontcolor"
             android:layout_marginLeft="10dp"
             android:text="非wifi网络流量"/>
         <TextView
@@ -117,10 +126,11 @@
             android:textSize="20dp"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
+            android:textColor="@color/fontcolor"
             android:layout_centerHorizontal="true"
             android:layout_alignParentRight="true"
             android:layout_marginRight="10dp"
-            android:text="7.6M"/>
+            android:text="极省流量"/>
     </RelativeLayout>
     <LinearLayout
         android:background="#CCCC"
@@ -128,6 +138,7 @@
         android:layout_marginLeft="10dp"
         android:layout_height="1dp"></LinearLayout>
     <RelativeLayout
+        android:background="@color/background"
         android:layout_width="match_parent"
         android:gravity="center_vertical"
         android:layout_height="40dp">
@@ -136,17 +147,19 @@
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:textSize="20dp"
+            android:textColor="@color/fontcolor"
             android:layout_marginLeft="10dp"
             android:text="非wifi网络播放提醒"/>
         <TextView
             android:layout_width="wrap_content"
             android:textSize="20dp"
+            android:textColor="@color/fontcolor"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:layout_centerHorizontal="true"
             android:layout_alignParentRight="true"
             android:layout_marginRight="10dp"
-            android:text="7.6M"/>
+            android:text="提醒一次"/>
     </RelativeLayout>
     <LinearLayout
         android:background="#CCCC"
@@ -154,6 +167,7 @@
         android:layout_marginLeft="10dp"
         android:layout_height="1dp"></LinearLayout>
     <RelativeLayout
+        android:background="@color/background"
         android:layout_width="match_parent"
         android:gravity="center_vertical"
         android:layout_height="40dp">
@@ -162,17 +176,14 @@
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:textSize="20dp"
+            android:textColor="@color/fontcolor"
             android:layout_marginLeft="10dp"
             android:text="推送通知"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:textSize="20dp"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:layout_centerHorizontal="true"
+        <Switch
             android:layout_alignParentRight="true"
-            android:layout_marginRight="10dp"
-            android:text="7.6M"/>
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content" />
     </RelativeLayout>
     <LinearLayout
         android:background="#CCCC"
@@ -184,6 +195,8 @@
         android:layout_width="match_parent"
         android:layout_height="15dp"></LinearLayout>
     <RelativeLayout
+        android:id="@+id/download"
+        android:background="@color/background"
         android:layout_width="match_parent"
         android:gravity="center_vertical"
         android:layout_height="40dp">
@@ -192,17 +205,10 @@
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:textSize="20dp"
+            android:textColor="@color/fontcolor"
             android:layout_marginLeft="10dp"
-            android:text="推送通知"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:textSize="20dp"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="10dp"
-            android:text="7.6M"/>
+            android:text="离线下载"/>
+
     </RelativeLayout>
     <LinearLayout
         android:background="#CCCC"
@@ -210,6 +216,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"></LinearLayout>
     <RelativeLayout
+        android:background="@color/background"
         android:layout_width="match_parent"
         android:gravity="center_vertical"
         android:layout_height="40dp">
@@ -218,16 +225,18 @@
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:textSize="20dp"
+            android:textColor="@color/fontcolor"
             android:layout_marginLeft="10dp"
-            android:text="推送通知"/>
+            android:text="版本更新"/>
         <TextView
             android:layout_width="wrap_content"
             android:textSize="20dp"
+            android:textColor="@color/fontcolor"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:layout_centerHorizontal="true"
             android:layout_alignParentRight="true"
             android:layout_marginRight="10dp"
-            android:text="7.6M"/>
+            android:text="6.3.2"/>
     </RelativeLayout>
 </LinearLayout>

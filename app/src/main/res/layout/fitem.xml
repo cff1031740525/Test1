@@ -2,8 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<view.xlistview.XListView
-    android:id="@+id/xlv"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"></view.xlistview.XListView>
+
+    <view.xlistview.XListView
+        android:id="@+id/xlv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"></view.xlistview.XListView>
 </LinearLayout>

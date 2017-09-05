@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="@color/background"
     android:orientation="vertical"
     android:weightSum="1">
 
@@ -85,6 +85,7 @@
     <LinearLayout
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
+        android:background="@color/background"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_weight="0.05">
@@ -94,7 +95,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_weight="1"
-            android:background="#fff"
+            android:background="@color/background"
             android:orientation="vertical">
         <ImageView
             android:src="@mipmap/sc"
@@ -102,7 +103,7 @@
             android:layout_height="30dp" />
             <TextView
                 android:text="收藏"
-                android:textColor="#333333"
+                android:textColor="@color/fontcolor"
                 android:layout_marginTop="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -112,6 +113,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:background="@color/background"
             android:layout_weight="1"
             android:orientation="vertical">
             <ImageView
@@ -120,16 +122,18 @@
                 android:layout_height="30dp" />
             <TextView
                 android:text="历史"
-                android:textColor="#333333"
+                android:textColor="@color/fontcolor"
                 android:layout_marginTop="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/yj"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:background="@color/background"
             android:layout_weight="1"
             android:orientation="vertical">
             <ImageView
@@ -138,7 +142,7 @@
                 android:layout_height="30dp" />
             <TextView
                 android:text="夜间"
-                android:textColor="#333333"
+                android:textColor="@color/fontcolor"
                 android:layout_marginTop="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -152,12 +156,14 @@
     android:layout_marginLeft="10dp"
     android:layout_width="match_parent"
     android:orientation="horizontal"
+    android:background="@color/background"
     android:gravity="center_vertical"
     android:layout_height="40dp">
     <TextView
         android:text="我的关注"
         android:layout_alignParentLeft="true"
         android:textSize="18dp"
+        android:textColor="@color/fontcolor"
         android:layout_centerVertical="true"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
@@ -177,6 +183,7 @@
         android:text="我的直播"
        android:layout_toLeftOf="@id/img1"
         android:textSize="16dp"
+        android:textColor="@color/fontcolor"
         android:layout_width="wrap_content"
         android:layout_height="match_parent" />
 </RelativeLayout>
@@ -189,12 +196,14 @@
         android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
         android:orientation="horizontal"
+        android:background="@color/background"
         android:gravity="center_vertical"
         android:layout_height="40dp">
         <TextView
             android:text="消息通知"
             android:layout_alignParentLeft="true"
             android:textSize="18dp"
+            android:textColor="@color/fontcolor"
             android:layout_centerVertical="true"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -222,12 +231,14 @@
         android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
         android:orientation="horizontal"
+        android:background="@color/background"
         android:gravity="center_vertical"
         android:layout_height="40dp">
         <TextView
             android:text="我的关注"
             android:layout_alignParentLeft="true"
             android:textSize="18dp"
+            android:textColor="@color/fontcolor"
             android:layout_centerVertical="true"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -245,7 +256,8 @@
         <TextView
             android:gravity="center_vertical"
             android:text="邀请好友得200元现金"
-            android:textColor="#999999"
+            android:textColor="@color/fontcolor"
+
             android:layout_toLeftOf="@id/img6"
             android:textSize="14dp"
             android:layout_width="wrap_content"
@@ -259,6 +271,7 @@
     <RelativeLayout
         android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
+        android:background="@color/background"
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:layout_height="40dp">
@@ -266,6 +279,7 @@
             android:text="消息通知"
             android:layout_alignParentLeft="true"
             android:textSize="18dp"
+            android:textColor="@color/fontcolor"
             android:layout_centerVertical="true"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -282,6 +296,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:text="新人领188红包"
+            android:textColor="@color/fontcolor"
             android:gravity="center_vertical"
             android:layout_height="match_parent"
             android:layout_toLeftOf="@id/img3"/>
@@ -291,9 +306,5 @@
         android:layout_width="match_parent"
         android:layout_marginBottom="10dp"
         android:layout_height="1dp"></LinearLayout>
-    <TextView
-        android:id="@+id/ng"
-        android:text="111"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+
 </LinearLayout>
