@@ -38,7 +38,9 @@ public class Myapp extends Application{
         ImageLoader.getInstance().init(configuration);
         MobSDK.init(this, Constants.AppKey, Constants.AppSecret);
         UMShareAPI.get(this);
+
         JPushInterface.setDebugMode(true);
         JPushInterface.init(this);
+
     }
 }

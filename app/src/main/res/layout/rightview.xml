@@ -180,10 +180,15 @@
             android:layout_marginLeft="10dp"
             android:text="推送通知"/>
         <Switch
-            android:layout_alignParentRight="true"
+            android:id="@+id/ts"
             android:layout_width="wrap_content"
+            android:textOn="开启"
+            android:checked="true"
+            android:textOff="关闭"
+            android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_height="wrap_content" />
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
     </RelativeLayout>
     <LinearLayout
         android:background="#CCCC"
