@@ -106,6 +106,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         header.add(new ChannelBean("科技",true));
         header.add(new ChannelBean("财经",true));
         header.add(new ChannelBean("时尚",true));
+        header.add(new ChannelBean("时尚",true));
 
         for (int i=0;i<header.size();i++){
             if(i<4){

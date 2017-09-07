@@ -77,6 +77,7 @@ public class MyLinerLayout extends LinearLayout {
     private void drawBanner() {
         tvlist=new ArrayList<>();
         line.removeAllViews();
+        //for循环添加条目
         for (int i = 0; i < header.size(); i++) {
             if(header.get(i).isSelect()){
                 TextView tv = new TextView(context);
