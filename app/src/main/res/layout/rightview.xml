@@ -100,6 +100,8 @@
         <Switch
             android:layout_alignParentRight="true"
             android:layout_width="wrap_content"
+            android:thumb="@drawable/turnoff"
+            android:track="@drawable/turnon"
             android:layout_centerVertical="true"
             android:layout_height="wrap_content" />
     </RelativeLayout>
@@ -182,13 +184,11 @@
         <Switch
             android:id="@+id/ts"
             android:layout_width="wrap_content"
-            android:textOn="开启"
             android:checked="true"
-            android:textOff="关闭"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:thumb="@drawable/turnoff"
+            android:track="@drawable/turnon"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true" />
     </RelativeLayout>
     <LinearLayout
         android:background="#CCCC"
