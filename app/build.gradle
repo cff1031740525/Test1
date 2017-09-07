@@ -33,7 +33,6 @@ android {
     }
 
 
-
 }
 repositories {
     flatDir {
@@ -54,6 +53,6 @@ dependencies {
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
     compile 'org.xutils:xutils:3.5.0'
     compile 'com.github.andyoom:draggrid:v1.0.1'
-    testCompile 'junit:junit:4.12'
     compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
+    testCompile 'junit:junit:4.12'
 }

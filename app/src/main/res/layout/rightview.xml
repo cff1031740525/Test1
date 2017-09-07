@@ -100,8 +100,8 @@
         <Switch
             android:layout_alignParentRight="true"
             android:layout_width="wrap_content"
-            android:thumb="@drawable/turnoff"
-            android:track="@drawable/turnon"
+            android:thumb="@drawable/thumb"
+            android:track="@drawable/track"
             android:layout_centerVertical="true"
             android:layout_height="wrap_content" />
     </RelativeLayout>
@@ -185,8 +185,8 @@
             android:id="@+id/ts"
             android:layout_width="wrap_content"
             android:checked="true"
-            android:thumb="@drawable/turnoff"
-            android:track="@drawable/turnon"
+            android:thumb="@drawable/thumb"
+            android:track="@drawable/track"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true" />
     </RelativeLayout>

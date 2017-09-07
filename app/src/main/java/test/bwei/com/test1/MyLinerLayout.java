@@ -14,6 +14,7 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -52,7 +53,7 @@ public class MyLinerLayout extends LinearLayout {
         init(context, attrs);
     }
 
-    public void init(Context context, AttributeSet attrs) {
+    public void init(final Context context, AttributeSet attrs) {
         this.context = context;
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.MyLinerLayout);
         typedArray.getDimensionPixelSize(R.styleable.MyLinerLayout_Margin, 10);
@@ -60,6 +61,7 @@ public class MyLinerLayout extends LinearLayout {
         line = view.findViewById(R.id.line);
         vp = view.findViewById(R.id.vp);
         addtv = view.findViewById(R.id.add);
+
 
     }
 

@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         initMeun();
         sp = getSharedPreferences("moshi", MODE_PRIVATE);
         if(TextUtils.isEmpty(sp.getString("status",null))){
@@ -99,24 +100,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         header.add(new ChannelBean("社会",true));
         header.add(new ChannelBean("国际",true));
         header.add(new ChannelBean("国内",true));
-        header.add(new ChannelBean("宠物",true));
         header.add(new ChannelBean("娱乐",true));
-        header.add(new ChannelBean("成人",true));
-        header.add(new ChannelBean("儿童",true));
-        header.add(new ChannelBean("人文",true));
-        header.add(new ChannelBean("物理",true));
-        header.add(new ChannelBean("化学",true));
-        header.add(new ChannelBean("搞笑",true));
-        header.add(new ChannelBean("战争",true));
-        header.add(new ChannelBean("电影",true));
-        header.add(new ChannelBean("电视剧",true));
-        header.add(new ChannelBean("明星",true));
-        header.add(new ChannelBean("星座",true));
-        header.add(new ChannelBean("变态",true));
-        header.add(new ChannelBean("重口",true));
-        header.add(new ChannelBean("航天",true));
+        header.add(new ChannelBean("体育",true));
+        header.add(new ChannelBean("军事",true));
+        header.add(new ChannelBean("科技",true));
+        header.add(new ChannelBean("财经",true));
+        header.add(new ChannelBean("时尚",true));
+
         for (int i=0;i<header.size();i++){
-            if(i<6){
+            if(i<4){
                 header.get(i).setSelect(true);
             }else{
                 header.get(i).setSelect(false);
@@ -171,18 +163,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onRestart() {
         super.onRestart();
-        header.clear();
-        fragments.clear();
-        for (int i=0;i<list2.size();i++){
-            if(list2.get(i).isSelect()){
-                MainFragment fragment=new MainFragment();
-                //Bundle bundle=new Bundle();
-                //bundle.putString("type",type[i]);o
-                //fragment.setArguments(bundle);
-                fragments.add(fragment);
-            }
 
+        if(list2!=null){
+            header.clear();
+            fragments.clear();
+            for (int i=0;i<list2.size();i++){
+                if(list2.get(i).isSelect()){
+                    MainFragment fragment=new MainFragment();
+                    //Bundle bundle=new Bundle();
+                    //bundle.putString("type",type[i]);o
+                    //fragment.setArguments(bundle);
+                    fragments.add(fragment);
+                }
+
+            }
+            myview.draw(list2,fragments);
+        }else{
+            myview.draw(header,fragments);
         }
-        myview.draw(list2,fragments);
+
+
     }
 }

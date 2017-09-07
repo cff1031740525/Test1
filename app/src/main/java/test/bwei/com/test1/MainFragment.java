@@ -1,11 +1,13 @@
 package test.bwei.com.test1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -115,8 +117,16 @@ public class MainFragment extends Fragment{
         Gson gson=new Gson();
         NewsInfo newsInfo = gson.fromJson(result, NewsInfo.class);
         NewsInfo.ResultBean result1 = newsInfo.result;
-        List<NewsInfo.ResultBean.DataBean> data = result1.data;
+        final List<NewsInfo.ResultBean.DataBean> data = result1.data;
         ListViewAdapter ada=new ListViewAdapter(data,getActivity());
         lv.setAdapter(ada);
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent=new Intent(getActivity(),NewsActivity.class);
+                intent.putExtra("url",data.get(i).url);
+                startActivity(intent);
+            }
+        });
     }
 }
