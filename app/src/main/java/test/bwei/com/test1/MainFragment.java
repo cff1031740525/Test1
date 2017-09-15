@@ -78,11 +78,11 @@ public class MainFragment extends Fragment{
             @Override
             public void haswifi() {
 
-                Bundle bundle=getArguments();
-                String type = bundle.getString("type");
+               // Bundle bundle=getArguments();
+                //String type = bundle.getString("type");
                 final RequestParams parmas=new RequestParams(HttpApi.URL);
                 parmas.addBodyParameter("key",HttpApi.KEY);
-                parmas.addBodyParameter("type",type);
+               // parmas.addBodyParameter("type",type);
                 x.http().post(parmas, new Callback.CommonCallback<String>() {
                     @Override
                     public void onSuccess(String result) {

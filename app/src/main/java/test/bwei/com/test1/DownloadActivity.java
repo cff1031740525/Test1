@@ -40,7 +40,7 @@ private List<CateBean> list=new ArrayList<>();
                         loadData(cateBean.type);
                     }
                 }
-            }
+             }
         });
         RecyclerViewAdapter ada=new RecyclerViewAdapter(list,this);
         lv.setLayoutManager(new LinearLayoutManager(this));
@@ -65,7 +65,6 @@ private List<CateBean> list=new ArrayList<>();
     public void loadData(final String type){
         RequestParams parms=new RequestParams(HttpApi.URL);
         parms.addBodyParameter("key",HttpApi.KEY);
-        parms.addBodyParameter("type",type);
         x.http().get(parms, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {

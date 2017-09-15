@@ -1,6 +1,11 @@
 package test.bwei.com.test1;
 
+import android.app.Dialog;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -26,7 +31,8 @@ public class right extends Fragment{
     private View v;
     private RelativeLayout download;
     private Switch ts;
-
+    private RelativeLayout verion;
+    private String url = "http://125.39.134.47/r/a.gdown.baidu.com/data/wisegame/7c28ac069399b336/kuaishou_4812.apk";
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -60,10 +66,46 @@ public class right extends Fragment{
                 }
             }
         });
+        verion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                initDialog();
+                loadapp();
+            }
+        });
     }
 
-    private void initView() {
+    private void loadapp() {
+
+    }
+
+    private void initDialog() {
+        ProgressDialog dia=new ProgressDialog(getActivity());
+        dia.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+        dia.setButton("取消下载", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                PackageManager man=getActivity().getPackageManager();
+                try {
+                    PackageInfo info=man.getPackageInfo(getActivity().getPackageName(),0);
+                    int versioncode=info.versionCode;
+                    VersionS ver=new VersionS();
+                    ver.setUrl(url);
+                    if(versioncode<ver.getVersionCode()){
+
+
+    }
+} catch (Exception e) {
+        e.printStackTrace();
+        }
+        }
+        });
+
+        }
+
+private void initView() {
         download = v.findViewById(R.id.download);
         ts = v.findViewById(R.id.ts);
+        verion = v.findViewById(R.id.version);
     }
 }

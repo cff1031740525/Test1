@@ -1,1 +1,1 @@
-include ':app', ':slidingmenu', ':xlistview', ':channellib'
+include ':app', ':slidingmenu', ':xlistview', ':channellib', ':mytab'
